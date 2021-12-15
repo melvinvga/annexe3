@@ -12,7 +12,7 @@
         <h1>C o m p a g n i e A t l a n t i k</h1>
     </header>
     <main>
-        //partie gauche de l'annexe
+        <!--partie gauche de l'annexe-->
         <div class="gauche">
             <ul>
                 <?php
@@ -36,10 +36,10 @@
                 ?>
             </ul>
         </div>
-        //partie droite de l'annexe
+        <!--partie droite de l'annexe-->
         <div class="droite">
             Sélectionner la liaison, et la date souhaitée<br>
-            //formulaire de la traversée
+            <!--formulaire de la traversée-->
             <form action='main32.php' method='GET'>
                 <select name="libelleLiaison" id="libelleLiaison-select">
                     <?php
@@ -74,6 +74,7 @@
             </form>
             <br>
             <?php
+            //les informations récupérées
             if (isset($_GET['libelleLiaison']) && isset($_GET['dateTraversée'])) {
                 echo $_GET['libelleLiaison'] . "<br>";
                 echo "Traversées pour le " . $_GET['dateTraversée'] . ". Sélectionner la traversée souhaitée";
