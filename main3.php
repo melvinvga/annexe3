@@ -12,6 +12,7 @@
         <h1>C o m p a g n i e A t l a n t i k</h1>
     </header>
     <main>
+        //partie gauche de l'annexe
         <div class="gauche">
             <ul>
                 <?php
@@ -21,21 +22,24 @@
                 } else {
                     //echo "connexion réussie";
                 }
-
+                //affichage de tout les secteurs
                 $txtSec = "SELECT numeroSecteur,libelleSecteur FROM secteur ORDER BY libelleSecteur ASC";
                 $reqSec = mysqli_query($bdd, $txtSec);
 
                 while ($donnees = mysqli_fetch_array($reqSec)) {
 
                 ?>
+                    //secteur clicable
                     <li><a href="main3.php?secteur=<?= $donnees["numeroSecteur"] ?>"><?= $donnees['libelleSecteur']; ?></li></a>
                 <?php
                 }
                 ?>
             </ul>
         </div>
+        //partie droite de l'annexe
         <div class="droite">
             Sélectionner la liaison, et la date souhaitée<br>
+            //formulaire de la traversée
             <form action='main32.php' method='GET'>
                 <select name="libelleLiaison" id="libelleLiaison-select">
                     <?php
